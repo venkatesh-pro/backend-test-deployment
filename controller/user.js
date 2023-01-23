@@ -100,8 +100,9 @@ exports.verifyPhoneOtp = async (req, res, next) => {
 
     res
       .cookie('token', token, {
-        httpOnly: true,
+//         httpOnly: true,
         sameSite: 'strict',
+        secure: false
       })
       .json(user)
   } catch (error) {
